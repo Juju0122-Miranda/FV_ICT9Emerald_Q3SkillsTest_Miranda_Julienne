@@ -35,17 +35,31 @@
             color: white;
           }
 
+          .photo-box img{
+            width: 120px;
+            border-radius: 50%;
+          }
 
+          .file{
+            text-align: center;
+          }
+
+          footer{
+    background-color: #143a72;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    margin-top: 5px;
+    font-size: 18px;
+    }
 
     </style>
 
 
 <body>
 
-     <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #143a72;">
   <div class="container-fluid">
-
-    <a class="navbar-brand" href="#">Logo</a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
       <span class="navbar-toggler-icon"></span>
@@ -54,19 +68,19 @@
     <div class="collapse navbar-collapse" id="mynavbar">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link" href="page2.html">Home</a>
+          <a class="nav-link" style="color: white;">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="page3.html">Fare Matrix</a>
+          <a class="nav-link" style="color: white;">Fare Matrix</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="page4.html">Schedule</a>
+          <a class="nav-link" style="color: white;">Schedule</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="page5.html">Help</a>
+          <a class="nav-link" style="color: white">Help</a>
         </li>
       </ul>
-      <form class="d-flex">
+      <form class="">
           <button class="btn btn-primary" type="button">Book now</button>
           <button class="btn btn-primary" type="button">Create Account</button>
         
@@ -76,96 +90,114 @@
 </nav>
 
   <br><br>
-   <label class="header" style="font-size: 28px; display: block; margin-bottom: 30px;">Book-aroo Registration Form</label>
+   <label class="header" style="font-size: 28px; display: block; margin-bottom: 30px;">Grab a Ride Registration Form</label>
 
    <div class="container" style="display: flex; justify-content: center; align-items: center; min-height: 100px;">
-     <div class="col" style="width: 600px; width: 80%; height: max-content;">
-       <div style="padding: 40px 30px; box-shadow: 0 8px 20px rgba(145, 136, 136, 0.2); background-color:#031e39; border-radius: 15px; text-align: center;">
+     <div class="col" style="width: 450px; width: 80%; height: max-content;">
+       <div style="padding: 40px 30px; box-shadow: 0 8px 20px rgba(145, 136, 136, 0.2); background-color: rgba(3, 30, 57 ,0.8); border-radius: 15px; text-align: center;">
 
+
+ 
+  <div class="container mt-4" style="justify-content: center; align-items: center;">
 
    <div class="row">
-
-    <div class="col-md-4">
+    <div class="col-md-5">
       <div class="photo-box">
-      </div>
+        <img src="https://i.pinimg.com/1200x/65/1c/6d/651c6da502353948bdc929f02da2b8e0.jpg">
 
+       <div class="col mb-3 mt-3">
+        <label for="text">Profile Picture</label>
+        <input type="file" class="form-control" accept="image/*" style="width: 280px; margin: auto;">
+       <button type="button" class="btn btn-primary mt-2" id="uploadBtn style=" style="width:280px; margin: 0 auto; display: block;"onclick="showUploadAlert()">Upload Photo</button>
+       </div>
+      </div>
+      <a href="https://docs.google.com/document/d/1xPmX7WASsO0MbTqDtAvojYsb5pj_U6dN2i_QMFUsP6Q/edit?tab=t.0" target="_blank">Sources</a>
+    </div>
+
+    <script>
+     document.getElementById('instruction').innerHTML="Please fill out the required fields in the regestration form below. Make sure that all information inputed is accurate. After filling out the form, double-check the information and submit.";
+
+    function showUploadAlert(){
+    alert("Your profile picture has succesfully been uploaded!");
+    }
+     </script>
+
+     <!---Registration Form-->
+      <div class="col-md-7">
       <div class="form-box">
-        <h2> Registration Form </h2>
+        <h2><b>Registration Form</b></h2>
 
       <details class="ontoggle">
          <summary>Instruction</summary>
             <p id="instruction"></p>
              </details>
 
-      <br>
-      <label for="First Name"class="form-label">First name</label>
-      <br>
-      <input type="text"id="" class="form-control" name="name" placeholder="Enter first name">
-    </div> 
+    <!---Content of the Form-->
 
+    <div class="row mt-3">
     <div class="col">
-      <br>
-      <div class="row">
-  <div class="col">
     <label class="form-label">First Name</label>
-    <input type="text" class="form-control" placeholder="Enter first name">
+    <input type="text" class="form-control" placeholder="First name">
   </div> 
 
   <div class="col">
     <label class="form-label">Last Name</label>
-    <input type="text" class="form-control" placeholder="Enter last name">
+    <input type="text" class="form-control" placeholder="Last name">
   </div>
 </div>
 
 <div class="row mt-2">
   <div class="col">
     <label class="form-label">Age</label>
-    <input type="number" class="form-control" placeholder="Enter age">
+    <input type="number" class="form-control" placeholder="Age">
   </div> 
 
   <div class="col">
     <label class="form-label">Contact Number</label>
-    <input type="text" class="form-control" placeholder="Enter contact number">
+    <input type="text" class="form-control" placeholder="Contact number">
   </div>
 </div>
 
 <div class="row mt-2">
-  <div class="col">
     <label class="form-label">Email</label>
-    <input type="email" class="form-control" placeholder="Enter email">
+    <input type="email" class="form-control" placeholder="mail">
   </div>
-</div>
+
 
 <div class="row mt-2">
-  <div class="col">
     <label class="form-label">Enter your username</label>
     <input type="text" class="form-control" placeholder="Username">
   </div>
-</div>
+
 
 <div class="row mt-2">
-  <div class="col">
     <label class="form-label">Enter your password</label>
     <input type="password" class="form-control" placeholder="Password">
   </div>
-</div>
 
 <div class="form-check mt-3">
   <input class="form-check-input" type="checkbox">
-  <label class="form-check-label">
-    Accept Terms of Use and Privacy Policy
-  </label>
+  <label class="form-check-label">Accept Terms of Use and Privacy Policy</label>
 </div>
 
 <br>
 <button class="btn btn-primary w-100">Create my account</button>
-<button class="btn btn-light w-100 mt-2">Cancel</button>
+<button type= "button" class="btn btn-light w-100 mt-2" onclick="window.location.reload()">Cancel</button>
+      
+</div>
+  </div>
+     </div>
+         </div>
+            </div>
+               </div>
+                   </div>
 
+<footer class="footer">
+    <p>© Julienne Iliana T. Miranda, 9-Emerald @2026</p>
 </body>
 </html>
 
-    <script>
-     document.getElementById('instruction').innerHTML="Please fill out the required fields in the regestration form below. Make sure that all information inputed is accurate. After filling out the form, double-check the information and submit.";
-     </script>
+  
 
+    
      
